@@ -2,10 +2,10 @@ local md5 = require 'md5'
 local this_file = 'i_know_my_md5.lua'
 
 function read_all(file)
-	local f = assert(io.open(file, "rb"))
-	local content = f:read("*all")
-	f:close()
-	return content
+  local f = assert(io.open(file, "rb"))
+  local content = f:read("*all")
+  f:close()
+  return content
 end
 
 local content = read_all(this_file)

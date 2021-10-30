@@ -21,7 +21,7 @@ local attempts = 0
 
 repeat
   local random_crc32  = crc32.hash(attempts)
-  edit_file('i_know_my_crc32.lua', 13, "local crc32_expected = '" .. random_crc32 .. "'")
+  edit_file('i_know_my_crc32.lua', 13, "local crc32_expected = " .. random_crc32)
   local match = require('i_know_my_crc32')
   attempts = attempts + 1
   print(attempts)
