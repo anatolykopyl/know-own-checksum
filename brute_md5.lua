@@ -19,7 +19,7 @@ function edit_file(input_file, line, content)
   io.close(file)
 end
 
-local attempts = 0
+local attempts = arg[1]
 
 repeat
   local random_md5  = md5.sumhexa(attempts)
